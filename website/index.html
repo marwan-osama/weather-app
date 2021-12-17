@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+    <script src="js/jquery-3.6.0.js"></script>
+    <title>weather app</title>
+</head>
+<body>
+    <main>
+        <section id="main-content-wrapper">
+            <img src="https://c.stocksy.com/a/9ijF00/z9/3750637.jpg" alt="clouds" id="clouds-background" class="main-content-background" style="display: none;">
+            <img src="https://images.financialexpress.com/2020/04/sky660.jpg" alt="clear" id="clear-background" class="main-content-background" style="display: none;">
+            <img src="https://wpcdn.us-east-1.vip.tn-cloud.net/www.myneworleans.com/content/uploads/2021/04/r/y/gettyimages-1257951336.jpg" alt="rain" id="rain-background" class="main-content-background" style="display: none;">
+            <img src="https://gyorsun.hu/media/2018/11/11-145686-foggy-weather-continues/1.jpg" alt="mist" id="mist-background" class="main-content-background" style="display: none;">
+            <img src="https://media.wired.co.uk/photos/606dba04751ea43ccd9898b5/16:9/w_2560%2Cc_limit/london-heatwave.jpg" alt="haze" id="haze-background" class="main-content-background" style="display: none;">
+            <h1 id="main-title">Weather journal</h1>
+            <div id="main-content">
+                <div id="form-wrapper">
+                    <form id="input-location-form">
+                        <label for="city-input" id="city-input-label">City name:</label>
+                        <input type="text" name="city" id="city-input" placeholder="City - cairo, new york, ..." list="search-suggest" autocomplete="off">
+                        <button id="generate-button" type="submit">generate</button>
+                    </form>
+                </div>
+                <div id="temp-report-wrapper">
+                    <div id="temp-report">
+                        <p id="temp-report-heading"></p>
+                        <p id="temp">NA&#176;</h2>
+                        <div id="temp-more">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+<datalist id="search-suggest">
+</datalist>
+<script src="js/app.js"></script>
+</html>

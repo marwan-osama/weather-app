@@ -1,0 +1,120 @@
+:root {
+    --blue-shade1: #425BE3; 
+    --blue-shade2: #55B3FA;
+    --blue-shade3: #42E0E3; 
+    --purple-shade1: #7542FF;
+    --green-shade1: #4AFFB3;
+    --yellow-shade1: #AD7218;
+    --yellow-shade2: #FAB855;
+}
+body {
+    margin: 0;
+    font-family: "Open Sans";
+    line-height: 1.6em;
+    background-color: #f3f3f3;
+    color: #f3f3f3;
+    text-shadow: 0px 0px 3px #000, 0px 0px 12px #333;
+}
+
+.main-content-background{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0 !important;
+    z-index: 0;
+    object-fit: cover;
+    width: 100%;
+}
+
+#main-content-wrapper {
+    width: calc(100% - 24px);
+    height: calc(100vh - 24px);
+    background-color: var(--purple-shade1);
+    padding: 12px;
+    box-shadow: 1px 1px 4px 2px #999;
+    position: relative;
+    overflow: hidden;
+}
+#main-content-wrapper > * {
+    margin: 32px 0;
+}
+#main-content {
+    position: relative;
+}
+#main-title {
+    text-align: center;
+    border-bottom: solid 2px #f0f0f0;
+    padding: 12px;
+    font-size: 32px;
+    font-weight: 500;
+    position: relative;
+}
+
+
+#form-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 32px 0;
+}
+#input-location-form{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 22px;
+}
+#input-location-form input{
+    padding: 8px;
+    font-size: 22px;
+    border-radius: 2px;
+    border: none;
+    margin: 0 2px;
+    width: calc(200px + 20vw);
+    box-shadow: 0 0 2px 1px rgb(80, 80, 80) inset;
+}
+#city-input-label {
+    font-size: calc(16px + 0.5vw);
+}
+#generate-button {
+    padding: 8px;
+    font-size: 22px;
+    border: none;
+    margin: 0 2px;
+    border-radius: 2px;
+    background: var(--blue-shade2);
+    cursor: pointer;
+    color: #f3f3f3;
+    transition-property: background-color, box-shadow;
+    transition-duration: 300ms;
+    transition-timing-function: ease;
+    box-shadow: 0 0 2px 1px rgb(80, 80, 80);
+}#generate-button:hover {
+    background-color: var(--yellow-shade1);
+    box-shadow: 0 0 2px 1px rgb(80, 80, 80) inset;
+}
+
+#temp-report {
+    text-align: center;
+    margin: 64px 0;
+}
+#temp-report > * {
+    margin: 0;
+}
+#temp-report-heading {
+    font-size: 22px;
+}
+#temp {
+    font-size: calc(64px + 5vw);
+    font-weight: 200;
+    line-height: 1em;
+}
+
+@media only screen and (max-width: 600px) {
+    #input-location-form {
+        display: grid !important;
+        grid-gap: 4px;
+    }
+}
